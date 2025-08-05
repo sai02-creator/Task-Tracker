@@ -1,7 +1,10 @@
+import { useState } from "react";
+
 const todoList = ["Do Homework", "Clean Room", "Take Out Chicken"];
 
 function TodoList() {
-    
+    const [newTask, setNewTask] = useState("");
+
     function addTask() {
 
     }
