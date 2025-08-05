@@ -4,6 +4,9 @@ function TodoList() {
     return <div>
               <h2> Todo List </h2>
 
+              <input type="text" placeholder="New task..."/>
+              <button> Add task </button>
+
               <ul>
                 {todoList.map((task, key) => (
                     <li key={key}>{task}</li>
