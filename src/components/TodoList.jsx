@@ -1,6 +1,10 @@
 const todoList = ["Do Homework", "Clean Room", "Take Out Chicken"];
 
 function TodoList() {
+    
+    function addTask() {
+
+    }
     return <div>
               <h2> Todo List </h2>
 
