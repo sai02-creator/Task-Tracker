@@ -11,7 +11,7 @@ function TodoList() {
     return <div>
               <h2> Todo List </h2>
 
-              <input type="text" placeholder="New task..."/>
+              <input type="text" placeholder="New task..." onChange={(event) => setNewTask(event.targert.value)}/>
               <button> Add task </button>
 
               <ul>
