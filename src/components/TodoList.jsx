@@ -3,8 +3,11 @@ import { useState } from "react";
 
 function TodoList() {
     const [newTask, setNewTask] = useState("");
-    const [todoList, setTodoList] = useState(["Do Homework", "Clean Room", "Take Out Chicken"]
-)
+    const [todoList, setTodoList] = useState([
+      { id:1, taskName: "Do Homework"},
+      { id:2, taskName: "Clean Room"},
+      { id:3, taskName: "Take Out Chicken"},
+    ]);
 
     function addTask() {
       setTodoList([...todoList, newTask]);
