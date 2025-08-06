@@ -17,7 +17,7 @@ function TodoList() {
               <h2> Todo List </h2>
 
               <input type="text" placeholder="New task..." value={newTask} onChange={(event) => setNewTask(event.target.value)}/>
-              <button onClick={addTask}> Add task </button>
+              <button onClick={addTask} disabled={!newTask}> Add task </button>
 
               <ul>
                 {todoList.map((task, key) => (
