@@ -1,18 +1,22 @@
 import { useState } from "react";
 
-const todoList = ["Do Homework", "Clean Room", "Take Out Chicken"];
 
 function TodoList() {
     const [newTask, setNewTask] = useState("");
+    const [todoList, setTodoList] = useState(["Do Homework", "Clean Room", "Take Out Chicken"]
+)
 
     function addTask() {
+      setTodoList([...todoList, newTask]);
+       
 
     }
-    return <div>
+    return (
+          <div>
               <h2> Todo List </h2>
 
-              <input type="text" placeholder="New task..." onChange={(event) => setNewTask(event.targert.value)}/>
-              <button> Add task </button>
+              <input type="text" placeholder="New task..." value={newTask} onChange={(event) => setNewTask(event.target.value)}/>
+              <button onClick={addTask}> Add task </button>
 
               <ul>
                 {todoList.map((task, key) => (
@@ -21,6 +25,7 @@ function TodoList() {
               </ul>
               
           </div>
+    );
 }
 
 export default TodoList;
