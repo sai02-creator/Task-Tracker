@@ -10,7 +10,8 @@ function TodoList() {
     ]);
 
     function addTask() {
-      setTodoList([...todoList, newTask]);
+      const lastId = todoList[todoList.length - 1].id;
+      setTodoList([...todoList, {id: lastId + 1, taskName: newTask}]);
       setNewTask("");
        
 
@@ -24,7 +25,7 @@ function TodoList() {
 
               <ul>
                 {todoList.map((task, key) => (
-                    <li key={key}>{task}</li>
+                    <li key={key}>{task.taskName}<button onClick={deleteTask}> Delete </button></li>
                 ))}
               </ul>
               
