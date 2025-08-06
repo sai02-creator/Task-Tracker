@@ -8,6 +8,7 @@ function TodoList() {
 
     function addTask() {
       setTodoList([...todoList, newTask]);
+      setNewTask("");
        
 
     }
