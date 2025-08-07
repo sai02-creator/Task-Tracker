@@ -36,7 +36,10 @@ function TodoList() {
 
               <ul>
                 {todoList.map((task, key) => (
-                    <li key={key}>{task.taskName}<p>Task Completed: {task.isCompleted ? "Yes" : "No"} </p><button onClick={() => deleteTask(task.id)}> Delete </button></li>
+                    <li key={key}>{task.taskName}
+                    <p>Task Completed: {task.isCompleted ? "Yes" : "No"} </p>
+                    <button> Complete Task </button>
+                    <button onClick={() => deleteTask(task.id)}> Delete </button></li>
                 ))}
               </ul>
               
