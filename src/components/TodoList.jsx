@@ -11,7 +11,7 @@ function TodoList() {
 
     function addTask() {
       const lastId = todoList[todoList.length - 1].id;
-      setTodoList((prev) => [...prev, {id: lastId + 1, taskName: newTask}]);
+      setTodoList((prev) => [...prev, {id: lastId + 1, taskName: newTask, isCompleted: false}]);
       setNewTask("");
        
 
