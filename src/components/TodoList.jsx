@@ -16,6 +16,17 @@ function TodoList() {
        
 
     }
+
+
+    function deleteTask(id){
+      const filteredList = todoList.filter((task) => task.id !==id);
+      setTodoList(filteredList);
+
+
+    }
+
+
+
     return (
           <div>
               <h2> Todo List </h2>
@@ -25,7 +36,7 @@ function TodoList() {
 
               <ul>
                 {todoList.map((task, key) => (
-                    <li key={key}>{task.taskName}<button onClick={deleteTask}> Delete </button></li>
+                    <li key={key}>{task.taskName}<button onClick={() => deleteTask(task.id)}> Delete </button></li>
                 ))}
               </ul>
               
