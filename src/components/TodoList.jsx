@@ -24,6 +24,20 @@ function TodoList() {
 
 
     }
+    function completeTask(id){
+     
+      setTodoList((prev) => 
+        prev.map((task) => {
+
+          if (task.id === id) {
+            return { ...task, isCompleted: true };
+          } else {
+            return task;
+          }
+      } ));
+
+
+    }
 
 
 
@@ -38,7 +52,7 @@ function TodoList() {
                 {todoList.map((task, key) => (
                     <li key={key}>{task.taskName}
                     <p>Task Completed: {task.isCompleted ? "Yes" : "No"} </p>
-                    <button> Complete Task </button>
+                    <button onClick={() => completeTask(task.id)}> Complete Task </button>
                     <button onClick={() => deleteTask(task.id)}> Delete </button></li>
                 ))}
               </ul>
